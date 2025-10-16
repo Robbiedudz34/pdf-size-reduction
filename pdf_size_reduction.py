@@ -6,7 +6,7 @@ def compress_pdf_with_ghostscript(input_path, target_preset="/ebook"):
     """
     Compress a PDF using Ghostscript.
     target_preset options: /screen, /ebook, /printer, /prepress
-    Output saved in script directory as reduced_{stem}.pdf
+    Output saved in input directory as reduced_{stem}.pdf
     """
     # Use a valid file path and verify it is a PDF
     input_path = Path(input_path).resolve()
@@ -45,3 +45,4 @@ if __name__ == "__main__":
     user_input = input(">> ").strip().strip('"')
     if user_input:
         compress_pdf_with_ghostscript(user_input, target_preset="/ebook")
+
